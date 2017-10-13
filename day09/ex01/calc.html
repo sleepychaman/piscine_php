@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>It's over 9000!</title>
+    <style>
+        body {
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>It's over 9000!</h1>
+    <div>
+        <input type="text" id="gauche">
+        <select id="op">
+            <option value='+'>+</option>
+            <option value='-'>-</option>
+            <option value='*'>*</option>
+            <option value='/'>/</option>
+            <option value='%'>%</option>
+        </select>
+        <input type="text" id="droit">
+        <input type="submit" name="submit" value="Try me!" id="calc">
+    </div>
+    <script type="text/javascript">
+        var tmp = document.getElementById('calc');
+       setInterval("alert('Please, use me...')", 30000);
+        tmp.addEventListener('click', result, false);
+        function result() {
+            var gauche = document.getElementById('gauche').value;
+            var droit = document.getElementById('droit').value;
+            var op = document.getElementById('op').value;
+            if (gauche.length != 0 && droit.length != 0) {
+                var reg = new RegExp(/^([0-9]*)$/);
+                if (reg.test(gauche) && reg.test(droit)) {
+                    if (op === '+') {
+                        alert(parseInt(gauche) + parseInt(droit));
+                        console.log(parseInt(gauche) + parseInt(droit));
+                    }
+                    if (op === '-') {
+                        alert(parseInt(gauche) - parseInt(droit));
+                        console.log(parseInt(gauche) - parseInt(droit));
+                    }
+                    if (op === '*') {
+                        alert(parseInt(gauche) * parseInt(droit));
+                        console.log(parseInt(gauche) * parseInt(droit));
+                    }
+                    if (op === '/') {
+                        if (droit == '0') {
+                            alert("It's over 9000!");
+                            console.log("It's over 9000!");
+                        }
+                        else {
+                            alert(parseInt(gauche) / parseInt(droit));
+                            console.log(parseInt(gauche) / parseInt(droit));
+                        }
+                    }
+                    if (op === '%') {
+                        if (droit == '0') {
+                            alert("It's over 9000!");
+                            console.log("It's over 9000!");
+                        }
+                        else {
+                            alert(parseInt(gauche) % parseInt(droit));
+                            console.log(parseInt(gauche) % parseInt(droit));
+                        }
+                    }
+                }
+                else
+                    alert("Error :(");
+            }
+            else
+                alert("Error :(");
+        }
+    </script>    
+    </body>
+</html>

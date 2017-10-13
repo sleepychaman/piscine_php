@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.licensebuttons.net	TRUE	/	FALSE	1999999999	__cfduid	dfc54d4eddfb03ad57d581ca6f85eacab1507386402
-ethicsfordesign.com	TRUE	/	FALSE	1999999999	PIWIK_SESSID	96bf8ec9f20ecc7fa1ae715dc5b25252
-ethicsfordesign.com	TRUE	/	FALSE	1999999999	kirby_session	c8839ccc0a0a9421e7454bb5a568cb53
-
